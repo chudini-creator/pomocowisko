@@ -1,0 +1,87 @@
+.tm-card__img-wrap {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+.tm-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.tm-card:hover .tm-card__img {
+    transform: scale(1.08);
+}
+.tm-card__img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 40%,
+        rgba(19,31,24,0.65) 75%,
+        rgba(19,31,24,0.9) 100%
+    );
+    pointer-events: none;
+}
+.tm-card__shine {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.07) 0%,
+        transparent 50%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.tm-card:hover .tm-card__shine {
+    opacity: 1;
+}
+
+.tm-card__body {
+    padding: 24px 28px 28px;
+}
+.tm-card__role {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+.tm-card__name {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+.tm-card:hover .tm-card__name {
+    color: #ffffff;
+}
+.tm-card__desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.tm-card__accent-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-light), var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.tm-card:hover .tm-card__accent-bar {
+    transform: scaleX(1);
+}

@@ -1,0 +1,21 @@
+:root {
+    /* Główny motyw - Modern Bottle Green */
+    --primary: #1B3B1D;
+    /* Szlachetna butelkowa zieleń */
+    --primary-light: #256B4C;
+    /* Odrobinę jaśniejsza - idealna na :hover */
+    --primary-glow: rgba(26, 77, 54, 0.4);
+    /* Elegancka poświata */
+
+    /* Akcent (detale, ikony, ważne przyciski) */
+    --accent: #FBBF24;
+    /* Nowoczesne złoto/bursztyn - niesamowicie podbija zieleń */
+
+    /* Głęboka czerń przełamana zielenią - "pochłania" światło */
+    --bg-surface: #131F18;
+    --text-dark: #131F18;
+    --text-main: #F1F5F9;
+    --text-muted: #94A3B8;
+
+    --container-width: 1200px;
+}
