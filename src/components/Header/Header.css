@@ -1,6 +1,6 @@
 .Header {
     width: 100%;
-    background-color: var(--primary);
+    background-color: var(--bg-surface);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     top: 0;

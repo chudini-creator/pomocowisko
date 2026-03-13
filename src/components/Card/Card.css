@@ -1,41 +1,78 @@
+.tm-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.35),
+        0 1px 0 rgba(255, 255, 255, 0.07) inset;
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(60px) scale(0.96);
+    transition:
+        opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.tm-card--visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.tm-card:hover {
+    border-color: rgba(251, 191, 36, 0.35);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(37, 107, 76, 0.2),
+        0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    transform: translateY(-8px) scale(1.01);
+}
+
 .tm-card__img-wrap {
     position: relative;
     height: 280px;
     overflow: hidden;
 }
+
 .tm-card__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.7s cubic-bezier(0.16,1,0.3,1);
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .tm-card:hover .tm-card__img {
     transform: scale(1.08);
 }
+
 .tm-card__img-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        180deg,
-        transparent 40%,
-        rgba(19,31,24,0.65) 75%,
-        rgba(19,31,24,0.9) 100%
-    );
+    background: linear-gradient(180deg,
+            transparent 40%,
+            rgba(19, 31, 24, 0.65) 75%,
+            rgba(19, 31, 24, 0.9) 100%);
     pointer-events: none;
 }
+
 .tm-card__shine {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(255,255,255,0.07) 0%,
-        transparent 50%
-    );
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.07) 0%,
+            transparent 50%);
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.4s ease;
 }
+
 .tm-card:hover .tm-card__shine {
     opacity: 1;
 }
@@ -43,6 +80,7 @@
 .tm-card__body {
     padding: 24px 28px 28px;
 }
+
 .tm-card__role {
     display: inline-block;
     font-size: 0.68rem;
@@ -52,6 +90,7 @@
     color: var(--accent);
     margin-bottom: 8px;
 }
+
 .tm-card__name {
     font-size: 1.35rem;
     font-weight: 800;
@@ -61,9 +100,11 @@
     line-height: 1.2;
     transition: color 0.3s ease;
 }
+
 .tm-card:hover .tm-card__name {
     color: #ffffff;
 }
+
 .tm-card__desc {
     font-size: 0.88rem;
     color: var(--text-muted);
@@ -80,8 +121,9 @@
     background: linear-gradient(90deg, var(--primary-light), var(--accent));
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .tm-card:hover .tm-card__accent-bar {
     transform: scaleX(1);
 }

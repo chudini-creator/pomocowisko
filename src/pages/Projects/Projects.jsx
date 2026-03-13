@@ -1,0 +1,50 @@
+import './Projects.css';
+import Hero from '../../components/Hero/Hero';
+import Card from '../../components/Card/Card';
+import { useInView } from 'react-intersection-observer';
+function Projects() {
+    const projects = [
+        {
+            name: "Przedsiębiorstwo społeczne",
+            img: "./img/ps.jpeg",
+            desc: "Przedsiębiorstwo społeczne to organizacja, która łączy cele biznesowe z misją społeczną. Działa na rynku, oferując produkty lub usługi, ale jednocześnie angażuje się w rozwiązywanie problemów społecznych."
+        },
+        {
+            name: "Przedsiębiorstwo społeczne",
+            img: "./img/ps.jpeg",
+            desc: "Przedsiębiorstwo społeczne to organizacja, która łączy cele biznesowe z misją społeczną. Działa na rynku, oferując produkty lub usługi, ale jednocześnie angażuje się w rozwiązywanie problemów społecznych." 
+        },
+        {
+            name: "Przedsiębiorstwo społeczne",
+            img: "./img/ps.jpeg",
+            desc: "Przedsiębiorstwo społeczne to organizacja, która łączy cele biznesowe z misją społeczną. Działa na rynku, oferując produkty lub usługi, ale jednocześnie angażuje się w rozwiązywanie problemów społecznych."
+        }
+    ]
+
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1
+    });
+
+
+    return (
+        <div className='Projects'>
+            <Hero title="Projekty" bgImage="/path/to/hero-image.jpg" nextID="" />
+            <section className="tm-section">
+                <div className={`tm-header content${inView ? " tm-header--visible" : ""}`} ref={ref}>
+                    <span className="tm-header__eyebrow">Nasze działania</span>
+                    <h2 className="tm-header__title">Projekty, które realizujemy</h2>
+                    <p className="tm-header__sub">
+                        Nasze projekty to konkretne działania, które podejmujemy, aby realizować naszą misję. Każdy z nich jest starannie zaplanowany i realizowany z myślą o maksymalnym wpływie społecznym.
+                    </p>
+                </div>
+                <div className='ProjectsContent'>
+                    {projects.map((element, index) => (
+                        <Card key={index} element={element} index={index} />
+                    ))}
+                </div>
+            </section>    
+        </div>
+    )
+}
+export default Projects;

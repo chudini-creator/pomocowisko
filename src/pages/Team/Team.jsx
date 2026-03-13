@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./Team.css";
 import Hero from "../../components/Hero/Hero";
-import MemberCard from "../../components/MemberCard/MemberCard";
+import Card from "../../components/Card/Card";
 const TEAM_MEMBERS = [
     {
         img: "./img/1.jpg",
@@ -24,23 +24,23 @@ const TEAM_MEMBERS = [
 ];
 
 function useReveal() {
-        const ref = useRef(null);
-        const [visible, setVisible] = useState(false);
-        useEffect(() => {
-            const observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) {
-                        setVisible(true);
-                        observer.unobserve(entry.target);
-                    }
-                },
-                { threshold: 0.15 }
-            );
-            if (ref.current) observer.observe(ref.current);
-            return () => observer.disconnect();
-        }, []);
-        return [ref, visible];
-    }
+    const ref = useRef(null);
+    const [visible, setVisible] = useState(false);
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            },
+            { threshold: 0.15 }
+        );
+        if (ref.current) observer.observe(ref.current);
+        return () => observer.disconnect();
+    }, []);
+    return [ref, visible];
+}
 
 
 function Team() {
@@ -63,8 +63,8 @@ function Team() {
                 </div>
 
                 <div className="tm-grid content">
-                    {TEAM_MEMBERS.map((member, i) => (
-                        <MemberCard key={i} member={member} index={i} />
+                    {TEAM_MEMBERS.map((element, i) => (
+                        <Card key={i} element={element} index={i} />
                     ))}
                 </div>
             </section>
