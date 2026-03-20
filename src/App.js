@@ -6,6 +6,7 @@ import About from './pages/About/About';
 import Team from './pages/Team/Team';
 import Landing from './pages/Landing/Landing';
 import Projects from './pages/Projects/Projects';
+import Contact from './pages/Contact/Contact';
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/projekty" element={<Projects />} />
           <Route path="/o-fundacji" element={<About />} />
           <Route path="/zespół" element={<Team />} />
+          <Route path="/kontakt" element={<Contact />} />
         </Routes>
       </div>
       <Footer />

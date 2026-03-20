@@ -12,7 +12,7 @@ function Projects() {
         {
             name: "Przedsiębiorstwo społeczne",
             img: "./img/ps.jpeg",
-            desc: "Przedsiębiorstwo społeczne to organizacja, która łączy cele biznesowe z misją społeczną. Działa na rynku, oferując produkty lub usługi, ale jednocześnie angażuje się w rozwiązywanie problemów społecznych." 
+            desc: "Przedsiębiorstwo społeczne to organizacja, która łączy cele biznesowe z misją społeczną. Działa na rynku, oferując produkty lub usługi, ale jednocześnie angażuje się w rozwiązywanie problemów społecznych."
         },
         {
             name: "Przedsiębiorstwo społeczne",
@@ -31,10 +31,10 @@ function Projects() {
         <div className='Projects'>
             <Hero title="Projekty" bgImage="/path/to/hero-image.jpg" nextID="" />
             <section className="tm-section">
-                <div className={`tm-header content${inView ? " tm-header--visible" : ""}`} ref={ref}>
-                    <span className="tm-header__eyebrow">Nasze działania</span>
-                    <h2 className="tm-header__title">Projekty, które realizujemy</h2>
-                    <p className="tm-header__sub">
+                <div className={`HeaderText content${inView ? " HeaderText--visible" : ""}`} ref={ref}>
+                    <span className="eyebrow">Nasze działania</span>
+                    <h2 className="HeaderTitle">Projekty, które realizujemy</h2>
+                    <p className="HeaderTitleSub">
                         Nasze projekty to konkretne działania, które podejmujemy, aby realizować naszą misję. Każdy z nich jest starannie zaplanowany i realizowany z myślą o maksymalnym wpływie społecznym.
                     </p>
                 </div>
@@ -43,7 +43,7 @@ function Projects() {
                         <Card key={index} element={element} index={index} />
                     ))}
                 </div>
-            </section>    
+            </section>
         </div>
     )
 }

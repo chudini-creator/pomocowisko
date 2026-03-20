@@ -53,11 +53,11 @@ function Team() {
             <section className="tm-section">
                 <div
                     ref={headerRef}
-                    className={`tm-header content${headerVisible ? " tm-header--visible" : ""}`}
+                    className={`HeaderText content${headerVisible ? " HeaderText--visible" : ""}`}
                 >
-                    <span className="tm-header__eyebrow">Poznaj nas</span>
-                    <h2 className="tm-header__title">Ludzie, którzy tworzą&nbsp;<em>pomocowisko</em></h2>
-                    <p className="tm-header__sub">
+                    <span className="eyebrow">Poznaj nas</span>
+                    <h2 className="HeaderTitle">Ludzie, którzy tworzą&nbsp;<em>pomocowisko</em></h2>
+                    <p className="HeaderTitleSub">
                         Za każdym działaniem stoją prawdziwi ludzie – z pasją, historią i chęcią zmieniania świata na lepsze.
                     </p>
                 </div>
