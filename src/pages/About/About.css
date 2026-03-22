@@ -1,8 +1,10 @@
 .about-stats {
     position: relative;
-    background: var(--primary);
+    background: var(--bg-surface);
     overflow: hidden;
     padding: 4.5rem 5%;
+    border-bottom: 1px solid var(--accent);
+    box-shadow:0 0 15px 5px rgba(0, 0, 0, 0.15);
 }
 
 .about-stats__grid {
@@ -27,7 +29,7 @@
 }
 
 .about-stats__blob--2 {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 65%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.07), transparent 35%);
     top: auto;
     left: auto;
     bottom: -120px;

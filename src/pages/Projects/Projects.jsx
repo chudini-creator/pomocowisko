@@ -1,5 +1,4 @@
 import './Projects.css';
-import Hero from '../../components/Hero/Hero';
 import Card from '../../components/Card/Card';
 import { useInView } from 'react-intersection-observer';
 function Projects() {
@@ -29,7 +28,6 @@ function Projects() {
 
     return (
         <div className='Projects'>
-            <Hero title="Projekty" bgImage="/path/to/hero-image.jpg" nextID="" />
             <section className="tm-section">
                 <div className={`HeaderText content${inView ? " HeaderText--visible" : ""}`} ref={ref}>
                     <span className="eyebrow">Nasze działania</span>

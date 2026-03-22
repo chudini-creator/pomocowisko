@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import './About.css';
-import Hero from '../../components/Hero/Hero';
 import TextSection from '../../components/TextSection/TextSection';
 
 const STATS = [
@@ -61,8 +60,6 @@ function StatCard({ value, suffix, label, index }) {
 function About() {
     return (
         <div className="About">
-            <Hero title="O fundacji" bgImage="/path/to/hero-image.jpg" nextID="#about-content" />
-
             <div id="about-content" className="about-stats">
                 <div className="about-stats__grid">
                     {STATS.map((s, i) => (

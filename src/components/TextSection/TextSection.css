@@ -69,7 +69,7 @@
 
 .TextSection .title {
     color: var(--primary);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     -webkit-background-clip: text;
@@ -81,7 +81,7 @@
 }
 
 .TextSection .text {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--text-dark);
     line-height: 1.9;
     position: relative;
@@ -93,9 +93,9 @@
         padding: 2rem 1.75rem;
     }
     .TextSection .title {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
     }
     .TextSection .text {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }

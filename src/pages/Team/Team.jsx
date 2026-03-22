@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import "./Team.css";
-import Hero from "../../components/Hero/Hero";
 import Card from "../../components/Card/Card";
 const TEAM_MEMBERS = [
     {
@@ -48,7 +47,6 @@ function Team() {
 
     return (
         <div className="Team">
-            <Hero title="Nasz zespół" bgImage="" />
 
             <section className="tm-section">
                 <div

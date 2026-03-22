@@ -17,8 +17,7 @@ function Header() {
                         <li><NavLink to="/kontakt">Kontakt</NavLink></li>
                     </ul>
                 </nav>
-
-                <button className='HeaderCTA'>Wesprzyj nas</button>
+                
             </div>
         </header>
     );
