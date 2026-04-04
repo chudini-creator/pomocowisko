@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Heart, Users, Target, ArrowRight, Sparkles, Globe, HandHeart } from 'lucide-react';
+import { Heart, Users, Target, Globe} from 'lucide-react';
 import './Landing.css';
 
 function Landing() {
@@ -9,7 +9,6 @@ function Landing() {
   const [missionRef, missionInView] = useInView({ threshold: 0.2, triggerOnce: true });
   const [statsRef, statsInView] = useInView({ threshold: 0.3, triggerOnce: true });
   const [valuesRef, valuesInView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [ctaRef, ctaInView] = useInView({ threshold: 0.3, triggerOnce: true });
 
   const stats = [
     { value: '500+', label: 'Rodzin Wspieranych' },
