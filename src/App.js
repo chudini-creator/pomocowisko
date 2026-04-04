@@ -7,6 +7,8 @@ import Team from './pages/Team/Team';
 import Landing from './pages/Landing/Landing';
 import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
+import Statute from './pages/Statute/Statute';
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +20,7 @@ function App() {
           <Route path="/o-fundacji" element={<About />} />
           <Route path="/zespół" element={<Team />} />
           <Route path="/kontakt" element={<Contact />} />
+          <Route path="/statut" element={<Statute />} />
         </Routes>
       </div>
       <Footer />

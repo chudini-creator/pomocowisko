@@ -1,0 +1,384 @@
+.Statute {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--bg-surface) 0%, #0A1410 100%);
+}
+
+.statute-hero {
+    position: relative;
+    padding: 120px 0 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statute-hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    width: auto;
+    padding: 0 20px;
+}
+
+.statute-hero__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.statute-hero__subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: var(--accent);
+    line-height: 1.6;
+    max-width: 600px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.statute-hero__blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: float 20s ease-in-out infinite;
+    z-index: 1;
+}
+
+.statute-hero__blob--2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(184, 115, 51, 0.3) 0%, transparent 70%);
+    animation-delay: -10s;
+    animation-duration: 25s;
+    right: 0;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(100px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-50px, 50px) scale(0.9);
+    }
+}
+
+
+.statute-container {
+    max-width: 1400px;
+    width: auto;
+    margin: 0 auto;
+    padding: 0 40px 120px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+
+.statute-toc {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    width: auto;
+}
+
+.statute-toc__inner {
+    background: rgba(27, 59, 29, 0.3);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(184, 115, 51, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: auto;
+}
+
+.statute-toc__title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(184, 115, 51, 0.2);
+    width: auto;
+}
+
+.statute-toc__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: auto;
+}
+
+.statute-toc__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    border-left: 2px solid transparent;
+    color: var(--text-main);
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    width: auto;
+    opacity: 0.7;
+}
+
+.statute-toc__item:hover {
+    background: rgba(184, 115, 51, 0.1);
+    border-left-color: var(--accent);
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+.statute-toc__item.active {
+    background: rgba(184, 115, 51, 0.15);
+    border-left-color: var(--accent);
+    opacity: 1;
+}
+
+.statute-toc__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: rgba(184, 115, 51, 0.2);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.statute-toc__item.active .statute-toc__number {
+    background: var(--accent);
+    color: var(--bg-surface);
+}
+
+.statute-toc__label {
+    flex: 1;
+    line-height: 1.4;
+    width: auto;
+}
+
+.statute-content {
+    width: auto;
+}
+
+.statute-section {
+    margin-bottom: 80px;
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    width: auto;
+}
+
+.statute-section:nth-child(1) { animation-delay: 0.1s; }
+.statute-section:nth-child(2) { animation-delay: 0.2s; }
+.statute-section:nth-child(3) { animation-delay: 0.3s; }
+.statute-section:nth-child(4) { animation-delay: 0.4s; }
+.statute-section:nth-child(5) { animation-delay: 0.5s; }
+.statute-section:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.statute-section__title {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--accent);
+    position: relative;
+    width: auto;
+}
+
+.statute-section__title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+    box-shadow: 0 0 20px var(--accent);
+}
+
+.statute-section__content {
+    color: var(--text-main);
+    line-height: 1.9;
+    width: auto;
+}
+
+.statute-section__content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 32px 0 16px;
+    width: auto;
+}
+
+.statute-section__content p {
+    margin-bottom: 16px;
+    text-align: justify;
+    width: auto;
+}
+
+.statute-section__content ul,
+.statute-section__content ol {
+    margin: 16px 0;
+    padding-left: 24px;
+    width: auto;
+}
+
+.statute-section__content li {
+    margin-bottom: 8px;
+    width: auto;
+}
+
+.statute-download {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+    background: rgba(27, 59, 29, 0.3);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(184, 115, 51, 0.2);
+    border-radius: 16px;
+    margin-top: 60px;
+    transition: all 0.3s ease;
+    width: auto;
+}
+
+.statute-download:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 32px rgba(184, 115, 51, 0.2);
+}
+
+.statute-download__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: var(--accent);
+    border-radius: 12px;
+    color: var(--bg-surface);
+    flex-shrink: 0;
+}
+
+.statute-download__text {
+    flex: 1;
+    width: auto;
+}
+
+.statute-download__text h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 4px;
+    width: auto;
+}
+
+.statute-download__text p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    width: auto;
+}
+
+.statute-download__btn {
+    padding: 14px 28px;
+    background: var(--accent);
+    color: var(--bg-surface);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    width: auto;
+    box-shadow: 0 4px 16px rgba(184, 115, 51, 0.3);
+}
+
+.statute-download__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(184, 115, 51, 0.4);
+}
+
+.statute-download__btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+    .statute-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 24px 80px;
+    }
+
+    .statute-toc {
+        position: relative;
+        top: 0;
+    }
+
+    .statute-toc__inner {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .statute-hero {
+        padding: 80px 0 60px;
+    }
+
+    .statute-container {
+        padding: 0 20px 60px;
+    }
+
+    .statute-section {
+        margin-bottom: 60px;
+    }
+
+    .statute-download {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .statute-download__text {
+        width: 100%;
+    }
+
+    .statute-download__btn {
+        width: 100%;
+    }
+}
