@@ -8,16 +8,6 @@ function Projects() {
             img: "./img/ps.jpeg",
             desc: "Przedsiębiorstwo społeczne to organizacja, która łączy cele biznesowe z misją społeczną. Działa na rynku, oferując produkty lub usługi, ale jednocześnie angażuje się w rozwiązywanie problemów społecznych."
         },
-        {
-            name: "Przedsiębiorstwo społeczne",
-            img: "./img/ps.jpeg",
-            desc: "Przedsiębiorstwo społeczne to organizacja, która łączy cele biznesowe z misją społeczną. Działa na rynku, oferując produkty lub usługi, ale jednocześnie angażuje się w rozwiązywanie problemów społecznych."
-        },
-        {
-            name: "Przedsiębiorstwo społeczne",
-            img: "./img/ps.jpeg",
-            desc: "Przedsiębiorstwo społeczne to organizacja, która łączy cele biznesowe z misją społeczną. Działa na rynku, oferując produkty lub usługi, ale jednocześnie angażuje się w rozwiązywanie problemów społecznych."
-        }
     ]
 
     const [ref, inView] = useInView({
