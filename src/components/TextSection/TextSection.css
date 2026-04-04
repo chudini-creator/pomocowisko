@@ -13,7 +13,7 @@
 
 .TextSection__inner {
     position: relative;
-    background: #ffffff;
+    background: var(--bg-surface);
     border-radius: 24px;
     padding: 3rem 3.5rem;
     box-shadow:
@@ -60,7 +60,7 @@
     right: 24px;
     font-size: 16rem;
     line-height: 1;
-    color: rgba(26, 77, 54, 0.04);
+    color: var(--primary);
     font-family: Georgia, 'Times New Roman', serif;
     user-select: none;
     pointer-events: none;
@@ -68,10 +68,10 @@
 }
 
 .TextSection .title {
-    color: var(--primary);
+    color: var(--text-main);
     font-size: 2rem;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    background: var(--text-main);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -82,7 +82,7 @@
 
 .TextSection .text {
     font-size: 1rem;
-    color: var(--text-dark);
+    color: var(--text-muted);
     line-height: 1.9;
     position: relative;
     z-index: 1;

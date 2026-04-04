@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './About.css';
 import TextSection from '../../components/TextSection/TextSection';
 
@@ -58,6 +59,25 @@ function StatCard({ value, suffix, label, index }) {
 }
 
 function About() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const id = location.hash.replace('#', '');
+            setTimeout(() => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }
+            }, 100);
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }, [location]);
+
     return (
         <div className="About">
             <div id="about-content" className="about-stats">
@@ -75,11 +95,13 @@ function About() {
                     title="Skąd pomysł?"
                     text="Pomysł na fundacje powstał po wybuchu wojny w Ukrainie. Od początku konfliktu zaangażowaliśmy się w działania pomocowe, wspierając potrzebujące rodziny. Rozdzierający widok dzieci, kobiet i osób z niepełnosprawnościami, wysiadających z ostrzelanych pociągów, bardzo szybko zmotywował nas do szukania sposobów pomocy najbardziej potrzebującym. Zaczęliśmy od przygotowywania zup i kanapek, które trafiały do osób oczekujących na przekroczenie granicy. Później, przez dwa lata, udostępnialiśmy przestrzeń Dworu Ujazdowskiego wielu potrzebującym rodzinom. Oprócz zakwaterowania, zapewniliśmy im codzienne posiłki, opiekę medyczną i psychologiczną. Do tej pory pomagamy kilku rodzinom, które zostały w Polsce. To zmotywowało nas do stworzenia przedsiębiorstwa społecznego, które wspiera ich w odnalezieniu się w nowym kraju."
                     delay={0}
+                    id="pomysl"
                 />
                 <TextSection
                     title="Skąd nazwa?"
                     text="Nazwa fundacji powstała z potrzeby działania i niesienia pomocy. Od początku naszej działalności dążyliśmy do stworzenia miejsca, które będzie nie tylko punktem pomocy, ale też bezpieczną przestrzenią dla każdego, kto znalazł się w trudnej sytuacji. Chcieliśmy, aby nazwa była prosta, ciepła i bliska ludziom – tak jak my jesteśmy blisko tych, którym pomagamy."
                     delay={150}
+                    id="nazwa"
                 />
             </div>
         </div>

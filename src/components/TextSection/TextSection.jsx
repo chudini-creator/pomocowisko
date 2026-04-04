@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./TextSection.css";
 
-function TextSection({ title, text, delay = 0 }) {
+function TextSection({ title, text, delay = 0, id }) {
     const ref = useRef(null);
     const [visible, setVisible] = useState(false);
 
@@ -24,9 +24,10 @@ function TextSection({ title, text, delay = 0 }) {
             ref={ref}
             className={`TextSection${visible ? " visible" : ""}`}
             style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
+            id={id}
         >
             <div className="TextSection__inner">
-                <span className="TextSection__quote">&</span>
+                <span className="TextSection__quote">?</span>
                 <h2 className="title">{title}</h2>
                 <p className="text">{text}</p>
             </div>

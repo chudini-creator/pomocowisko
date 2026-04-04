@@ -1,3 +1,6 @@
+.About{
+    background-color: var(--bg-surface);
+}
 .about-stats {
     position: relative;
     background: var(--bg-surface);
