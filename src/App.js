@@ -1,13 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy } from "react";
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import About from './pages/About/About';
-import Team from './pages/Team/Team';
-import Landing from './pages/Landing/Landing';
-import Projects from './pages/Projects/Projects';
-import Contact from './pages/Contact/Contact';
-import Statute from './pages/Statute/Statute';
+import NotFound from './pages/NotFound/NotFound';
+
+const Landing = lazy(() => import('./pages/Landing/Landing'));
+const About = lazy(() => import('./pages/About/About'));
+const Team = lazy(() => import('./pages/Team/Team'));
+const Projects = lazy(() => import('./pages/Projects/Projects'));
+const Contact = lazy(() => import('./pages/Contact/Contact'));
+const Statute = lazy(() => import('./pages/Statute/Statute'));
 
 function App() {
   return (
@@ -21,6 +24,7 @@ function App() {
           <Route path="/zespół" element={<Team />} />
           <Route path="/kontakt" element={<Contact />} />
           <Route path="/statut" element={<Statute />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
