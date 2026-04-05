@@ -31,10 +31,10 @@ function Footer() {
         <footer className="Footer" ref={ref}>
             <div className={`FooterHeader ${inView ? 'reveal' : ''}`} style={{opacity: inView ? 1 : 0}}>
                 <h1>POMOCOWISKO</h1>
-                <div className="FooterRegistration">
+                {/* <div className="FooterRegistration">
                     <p><span>KRS:</span> 0000123456</p>
                     <p><span>NIP:</span> 123-456-78-90</p>
-                </div>
+                </div> */}
             </div>
 
             <div className="FooterInfo">
@@ -59,6 +59,7 @@ function Footer() {
 
             <div className={`FooterDivider ${inView ? 'reveal delay-3' : ''}`} style={{opacity: inView ? 1 : 0}}>
                 <p className="FooterCopyright">&copy; 2026 Pomocowisko. Wszystkie prawa zastrzeżone.</p>
+                <p className="FooterCopyright">Realizacja: Igor Sobierajczyk</p>
             </div>
         </footer>
     )
