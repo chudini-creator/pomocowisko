@@ -1,5 +1,6 @@
 import React, {useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { NavLink } from 'react-router-dom';
 import { Heart, Users, Target, Globe} from 'lucide-react';
 import './Landing.css';
 
@@ -59,9 +60,9 @@ function Landing() {
           </p>
 
           <div className="hero__actions">
-            <button className="btn btn--primary">
+            <NavLink to="/o-fundacji" className="btn btn--primary">
               Poznaj nas bliżej
-            </button>
+            </NavLink>
           </div>
         </div>
       </section>

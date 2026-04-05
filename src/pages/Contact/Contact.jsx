@@ -12,18 +12,18 @@ function Contact() {
             <div className="contact-hero">
                 <div className="contact-blob" />
                 <div className="contact-blob contact-blob-secondary" />
-                
+
                 <div className={`contact-hero-content${inView ? " contact-hero-content-visible" : ""}`} ref={ref}>
                     <span className='eyebrow'>Kontakt</span>
                     <h1 className='contact-hero-title'>Skontaktuj się z nami</h1>
                     <p className='contact-hero-subtitle'>
-                        Masz pytania lub chcesz dowiedzieć się więcej o naszej fundacji? 
+                        Masz pytania lub chcesz dowiedzieć się więcej o naszej fundacji?
                         <br /> Jesteśmy tutaj, aby pomóc!
                     </p>
                 </div>
             </div>
 
-            <div className='contact-container content'>
+            <div className={`contact-container content${inView ? " contact-container-visible" : ""}`} ref={ref}>
                 <div className='contact-info'>
                     <div className='contact-card'>
                         <div className='contact-icon'>
@@ -33,7 +33,7 @@ function Contact() {
                             </svg>
                         </div>
                         <h3>Email</h3>
-                        <a href="mailto:kontakt@fundacja.pl">kontakt@fundacja.pl</a>
+                        <a href="mailto:pomocowisko@gmail.com">pomocowisko@gmail.com</a>
                     </div>
 
                     <div className='contact-card'>
@@ -43,7 +43,7 @@ function Contact() {
                             </svg>
                         </div>
                         <h3>Telefon</h3>
-                        <a href="tel:+48123456789">+48 123 456 789</a>
+                        <a href="tel:+48603120157">+48 603 120 157</a>
                     </div>
 
                     <div className='contact-card'>
@@ -54,7 +54,7 @@ function Contact() {
                             </svg>
                         </div>
                         <h3>Adres</h3>
-                        <p>Ujazdów, gmina Nielisz</p>
+                        <p>Ujazdów 1, 22-413</p>
                     </div>
                 </div>
             </div>
