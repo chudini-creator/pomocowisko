@@ -4,6 +4,9 @@ import { useState } from 'react';
 
 function Header() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    const closeMobileMenu = () => setMobileMenuOpen(false);
 
     return (
         <header className='Header'>
@@ -14,7 +17,20 @@ function Header() {
                     </NavLink>
                 </div>
 
-                <nav className='navs'>
+                <button
+                    className={`hamburger-menu ${mobileMenuOpen ? 'hamburger-menu--open' : ''}`}
+                    type="button"
+                    aria-label={mobileMenuOpen ? 'Zamknij menu' : 'Otwórz menu'}
+                    aria-expanded={mobileMenuOpen}
+                    aria-controls="header-navigation"
+                    onClick={() => setMobileMenuOpen((isOpen) => !isOpen)}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav id="header-navigation" className={`navs ${mobileMenuOpen ? 'navs--open' : ''}`}>
                     <ul>
                         <li 
                             className='dropdown-wrapper'
@@ -45,8 +61,23 @@ function Header() {
                             </NavLink>
                             </div>
                         </li>
-                        <li><NavLink to="/projekty">Projekty</NavLink></li>
-                        <li><NavLink to="/kontakt">Kontakt</NavLink></li>
+                        <li className='mobile-only'>
+                            <NavLink to="/o-fundacji" onClick={closeMobileMenu}>O fundacji</NavLink>
+                        </li>
+                        <li className='mobile-only mobile-sub-item'>
+                            <NavLink to="/o-fundacji#pomysl" onClick={closeMobileMenu}>Skąd pomysł?</NavLink>
+                        </li>
+                        <li className='mobile-only mobile-sub-item'>
+                            <NavLink to="/o-fundacji#nazwa" onClick={closeMobileMenu}>Skąd nazwa?</NavLink>
+                        </li>
+                        <li className='mobile-only mobile-sub-item'>
+                            <NavLink to="/zespół" onClick={closeMobileMenu}>Nasz zespół</NavLink>
+                        </li>
+                        <li className='mobile-only mobile-sub-item'>
+                            <NavLink to="/statut" onClick={closeMobileMenu}>Statut</NavLink>
+                        </li>
+                        <li><NavLink to="/projekty" onClick={closeMobileMenu}>Projekty</NavLink></li>
+                        <li><NavLink to="/kontakt" onClick={closeMobileMenu}>Kontakt</NavLink></li>
                     </ul>
                 </nav>
                 
