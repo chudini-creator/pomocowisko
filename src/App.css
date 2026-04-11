@@ -5,6 +5,12 @@
   width: 100%;
 }
 
+html,
+body {
+  background-color: var(--bg-surface);
+  overscroll-behavior-y: none;
+}
+
 #root,
 .App {
   display: flex;
