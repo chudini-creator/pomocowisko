@@ -12,9 +12,9 @@ function Landing() {
   const [valuesRef, valuesInView] = useInView({ threshold: 0.2, triggerOnce: true });
 
   const stats = [
-    { value: '500+', label: 'Rodzin Wspieranych' },
+    { value: '10+', label: 'Rodzin Wspieranych' },
     { value: '50+', label: 'Wolontariuszy' },
-    { value: '100+', label: 'Zrealizowanych Projektów' },
+    { value: '10+', label: 'Zrealizowanych Projektów' },
     { value: '24/7', label: 'Gotowość Pomocy' }
   ];
 
