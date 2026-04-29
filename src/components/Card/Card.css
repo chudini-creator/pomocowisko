@@ -126,3 +126,13 @@
 .tm-card:hover .tm-card__accent-bar {
     transform: scaleX(1);
 }
+
+@media screen and (max-width: 1090px) {
+    .tm-card:hover{
+        transition: none;
+        transform: translateY(0px) scale(1);
+    }
+    .tm-card:hover .tm-card__img{
+        transform: scale(1);
+    }
+}

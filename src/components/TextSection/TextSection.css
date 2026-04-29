@@ -87,6 +87,11 @@
     position: relative;
     z-index: 1;
 }
+@media (max-width: 1090px){
+    .TextSection__inner:hover{
+        transform: translateY(0px);
+    }
+}
 
 @media (max-width: 640px) {
     .TextSection__inner {
