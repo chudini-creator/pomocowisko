@@ -84,6 +84,7 @@ function About() {
                 <title>O Naszej Misji i Historii | Fundacja Pomocowisko</title>
                 <meta name="description" content="Poznaj historię Fundacji Pomocowisko. Skąd wziął się pomysł i co oznacza nasza nazwa? Dowiedz się, dlaczego powstała nasza fundacja i jaki mamy cel." />
                 <meta property="og:title" content="O Naszej Misji i Historii | Fundacja Pomocowisko" />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/o-fundacji" />
             </Helmet>
             <div id="about-content" className="about-stats">
                 <div className="about-stats__grid">
