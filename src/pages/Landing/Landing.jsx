@@ -1,7 +1,8 @@
-import React, {useRef } from 'react';
+import React, { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { NavLink } from 'react-router-dom';
-import { Heart, Users, Target, Globe} from 'lucide-react';
+import { Heart, Users, Target, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import './Landing.css';
 
 function Landing() {
@@ -43,6 +44,12 @@ function Landing() {
 
   return (
     <div className="landing">
+      <Helmet>
+        <title>Fundacja Pomocowisko| Pomagamy Razem</title>
+        <meta name="description" content="Witamy na stronie Fundacji Pomocowisko. Wspieramy lokalną społeczność, organizujemy warsztaty i pomagamy wykluczonym. Poznaj naszą misję i dołącz do nas!" />
+        <meta property="og:title" content="Fundacja Pomocowisko| Pomagamy Razem" />
+      </Helmet>
+
       <section className="hero" ref={heroRef}>
         <div className="hero__background">
           <div className="hero__orb hero__orb--1"></div>
@@ -67,15 +74,15 @@ function Landing() {
         </div>
       </section>
 
-      <section 
-        className={`stats ${statsInView ? 'stats--visible' : ''}`} 
+      <section
+        className={`stats ${statsInView ? 'stats--visible' : ''}`}
         ref={statsRef}
       >
         <div className="stats__container">
           {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className="stat-card" 
+            <div
+              key={index}
+              className="stat-card"
               style={{ '--delay': `${index * 0.1}s` }}
             >
               <div className="stat-card__value">{stat.value}</div>
@@ -86,8 +93,8 @@ function Landing() {
         </div>
       </section>
 
-      <section 
-        className={`mission ${missionInView ? 'mission--visible' : ''}`} 
+      <section
+        className={`mission ${missionInView ? 'mission--visible' : ''}`}
         ref={missionRef}
       >
         <div className="mission__container">
@@ -117,8 +124,8 @@ function Landing() {
         </div>
       </section>
 
-      <section 
-        className={`values ${valuesInView ? 'values--visible' : ''}`} 
+      <section
+        className={`values ${valuesInView ? 'values--visible' : ''}`}
         ref={valuesRef}
       >
         <div className="values__container">
@@ -128,9 +135,9 @@ function Landing() {
 
           <div className="values__grid">
             {values.map((value, index) => (
-              <div 
-                key={index} 
-                className="value-card" 
+              <div
+                key={index}
+                className="value-card"
                 style={{ '--delay': `${index * 0.15}s` }}
               >
                 <div className="value-card__icon-wrapper">
