@@ -342,6 +342,7 @@ function Statute() {
                 <title>Statut i Dokumenty Fundacji | Fundacja Pomocowisko</title>
                 <meta name="description" content="Zapoznaj się ze statutem Fundacji Pomocowisko. Działamy w pełni transparentnie i jawnie. Sprawdź formalne zasady naszego funkcjonowania." />
                 <meta property="og:title" content="Statut i Dokumenty Fundacji | Fundacja Pomocowisko" />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/statut" />
             </Helmet>
             <div className="statute-hero">
                 <div className="statute-hero__content">
