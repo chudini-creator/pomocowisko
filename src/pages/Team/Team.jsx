@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./Team.css";
 import Card from "../../components/Card/Card";
+import { Helmet } from "react-helmet-async";
 const TEAM_MEMBERS = [
     {
         img: "./img/1.jpg",
@@ -47,6 +48,11 @@ function Team() {
 
     return (
         <div className="Team">
+            <Helmet>
+                <title>Nasz Zespół | Ludzie Fundacji Pomocowisko</title>
+                <meta name="description" content="Poznaj zespół Fundacji Pomocowisko! To grupa pasjonatów i wolontariuszy, którzy codziennie z zaangażowaniem działają na rzecz naszej społeczności." />
+                <meta property="og:title" content="Nasz Zespół | Ludzie Fundacji Pomocowisko" />
+            </Helmet>
 
             <section className="tm-section">
                 <div
@@ -54,7 +60,7 @@ function Team() {
                     className={`HeaderText content${headerVisible ? " HeaderText--visible" : ""}`}
                 >
                     <span className="eyebrow">Poznaj nas</span>
-                    <h2 className="HeaderTitle">Ludzie, którzy tworzą&nbsp;<em>pomocowisko</em></h2>
+                    <h1 className="HeaderTitle">Ludzie, którzy tworzą&nbsp;<em>pomocowisko</em></h1>
                     <p className="HeaderTitleSub">
                         Za każdym działaniem stoją prawdziwi ludzie – z pasją, historią i chęcią zmieniania świata na lepsze.
                     </p>
