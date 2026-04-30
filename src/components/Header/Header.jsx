@@ -32,33 +32,33 @@ function Header() {
 
                 <nav id="header-navigation" className={`navs ${mobileMenuOpen ? 'navs--open' : ''}`}>
                     <ul>
-                        <li 
+                        <li
                             className='dropdown-wrapper'
                             onMouseEnter={() => setDropdownOpen(true)}
                             onMouseLeave={() => setDropdownOpen(false)}
                         >
                             <NavLink to="/o-fundacji">O fundacji</NavLink>
                             <div className={`dropdown-menu ${dropdownOpen ? 'dropdown-menu--open' : ''}`}>
-                            <NavLink 
-                                to="/o-fundacji#pomysl" 
-                                className="dropdown-item"
-                                onClick={() => setDropdownOpen(false)}
-                            >
-                                Skąd pomysł?
-                            </NavLink>
-                            <NavLink 
-                                to="/o-fundacji#nazwa" 
-                                className="dropdown-item"
-                                onClick={() => setDropdownOpen(false)}
-                            >
-                                Skąd nazwa?
-                            </NavLink>
-                            <NavLink to="/zespół" className="dropdown-item">
-                                Nasz zespół
-                            </NavLink>
-                            <NavLink to="/statut" className="dropdown-item">
-                                Statut
-                            </NavLink>
+                                <NavLink
+                                    to="/o-fundacji#pomysl"
+                                    className="dropdown-item"
+                                    onClick={() => setDropdownOpen(false)}
+                                >
+                                    Skąd pomysł?
+                                </NavLink>
+                                <NavLink
+                                    to="/o-fundacji#nazwa"
+                                    className="dropdown-item"
+                                    onClick={() => setDropdownOpen(false)}
+                                >
+                                    Skąd nazwa?
+                                </NavLink>
+                                <NavLink to="/zespol" className="dropdown-item">
+                                    Nasz zespół
+                                </NavLink>
+                                <NavLink to="/statut" className="dropdown-item">
+                                    Statut
+                                </NavLink>
                             </div>
                         </li>
                         <li className='mobile-only'>
@@ -71,7 +71,7 @@ function Header() {
                             <NavLink to="/o-fundacji#nazwa" onClick={closeMobileMenu}>Skąd nazwa?</NavLink>
                         </li>
                         <li className='mobile-only mobile-sub-item'>
-                            <NavLink to="/zespół" onClick={closeMobileMenu}>Nasz zespół</NavLink>
+                            <NavLink to="/zespol" onClick={closeMobileMenu}>Nasz zespół</NavLink>
                         </li>
                         <li className='mobile-only mobile-sub-item'>
                             <NavLink to="/statut" onClick={closeMobileMenu}>Statut</NavLink>
@@ -80,7 +80,7 @@ function Header() {
                         <li><NavLink to="/kontakt" onClick={closeMobileMenu}>Kontakt</NavLink></li>
                     </ul>
                 </nav>
-                
+
             </div>
         </header>
     );
