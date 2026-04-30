@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './About.css';
 import TextSection from '../../components/TextSection/TextSection';
-
+import { Helmet } from 'react-helmet-async';
 const STATS = [
-    { value: 2,    suffix: "+",  label: "Lata działalności" },
-    { value: 50,   suffix: "+",  label: "Rodzin objętych pomocą" },
-    { value: 1000, suffix: "+",  label: "Posiłków rozdanych" },
-    { value: 100,  suffix: "%",  label: "Zaangażowania" },
+    { value: 2, suffix: "+", label: "Lata działalności" },
+    { value: 50, suffix: "+", label: "Rodzin objętych pomocą" },
+    { value: 1000, suffix: "+", label: "Posiłków rozdanych" },
+    { value: 100, suffix: "%", label: "Zaangażowania" },
 ];
 
 function useCountUp(target, duration = 2000, active) {
@@ -67,9 +67,9 @@ function About() {
             setTimeout(() => {
                 const element = document.getElementById(id);
                 if (element) {
-                    element.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'start' 
+                    element.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
             }, 100);
@@ -80,6 +80,11 @@ function About() {
 
     return (
         <div className="About">
+            <Helmet>
+                <title>O Naszej Misji i Historii | Fundacja Pomocowisko</title>
+                <meta name="description" content="Poznaj historię Fundacji Pomocowisko. Skąd wziął się pomysł i co oznacza nasza nazwa? Dowiedz się, dlaczego powstała nasza fundacja i jaki mamy cel." />
+                <meta property="og:title" content="O Naszej Misji i Historii | Fundacja Pomocowisko" />
+            </Helmet>
             <div id="about-content" className="about-stats">
                 <div className="about-stats__grid">
                     {STATS.map((s, i) => (
@@ -89,7 +94,7 @@ function About() {
                 <div className="about-stats__blob" />
                 <div className="about-stats__blob about-stats__blob--2" />
             </div>
-
+            <h1 style={{ opacity: 0 }}>O Fundacji Pomocowisko – Skąd pomysł i nasza misja</h1>
             <div className="content about-sections">
                 <TextSection
                     title="Skąd pomysł?"
