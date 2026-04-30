@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import './Statute.css';
 
 const STATUTE_SECTIONS = [
@@ -285,15 +286,15 @@ function Statute() {
 
     useEffect(() => {
         const sections = document.querySelectorAll('.statute-section');
-        
+
         const handleScroll = () => {
             const scrollPosition = window.scrollY + 150;
             let currentSection = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
-                
+
                 if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                     currentSection = section.id;
                 }
@@ -301,19 +302,19 @@ function Statute() {
             if (!currentSection) {
                 const scrollBottom = window.scrollY + window.innerHeight;
                 const pageHeight = document.documentElement.scrollHeight;
-                
+
                 if (pageHeight - scrollBottom < 100) {
                     currentSection = sections[sections.length - 1]?.id || '';
                 }
             }
-            
+
             if (currentSection && currentSection !== activeSection) {
                 setActiveSection(currentSection);
             }
         };
 
         handleScroll();
-        
+
         window.addEventListener('scroll', handleScroll, { passive: true });
 
         return () => {
@@ -337,10 +338,15 @@ function Statute() {
 
     return (
         <div className="Statute">
+            <Helmet>
+                <title>Statut i Dokumenty Fundacji | Fundacja Pomocowisko</title>
+                <meta name="description" content="Zapoznaj się ze statutem Fundacji Pomocowisko. Działamy w pełni transparentnie i jawnie. Sprawdź formalne zasady naszego funkcjonowania." />
+                <meta property="og:title" content="Statut i Dokumenty Fundacji | Fundacja Pomocowisko" />
+            </Helmet>
             <div className="statute-hero">
                 <div className="statute-hero__content">
                     <span className="eyebrow">Dokumenty</span>
-                    <h1 className="statute-hero__title">Statut Fundacji</h1>
+                    <h1 className="statute-hero__title">Statut Fundacji Pomocowisko</h1>
                     <p className="statute-hero__subtitle">
                         Oficjalny dokument określający zasady działania Fundacji Pomocowisko
                     </p>
@@ -376,7 +382,7 @@ function Statute() {
                             className="statute-section"
                         >
                             <h2 className="statute-section__title">{section.title}</h2>
-                            <div 
+                            <div
                                 className="statute-section__content"
                                 dangerouslySetInnerHTML={{ __html: section.content }}
                             />
