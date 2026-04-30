@@ -23,6 +23,7 @@ function Projects() {
                 <title>Nasze Projekty i Inicjatywy | Fundacja Pomocowisko</title>
                 <meta name="description" content="Zobacz, co robimy! Sprawdź aktualne i zrealizowane projekty Fundacji Pomocowisko. Warsztaty, wsparcie społeczne i lokalne inicjatywy." />
                 <meta property="og:title" content="Nasze Projekty i Inicjatywy | Fundacja Pomocowisko" />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/projekty" />
             </Helmet>
             <section className="tm-section">
                 <div className={`HeaderText content${inView ? " HeaderText--visible" : ""}`} ref={ref}>
