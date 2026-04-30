@@ -1,6 +1,6 @@
 import './Contact.css';
 import { useInView } from 'react-intersection-observer';
-
+import { Helmet } from 'react-helmet-async';
 function Contact() {
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -9,6 +9,11 @@ function Contact() {
 
     return (
         <div className="Contact">
+            <Helmet>
+                <title>Kontakt z Fundacją Pomocowisko | Fundacja Pomocowisko</title>
+                <meta name="description" content="Skontaktuj się z Fundacją Pomocowisko. Chcesz wesprzeć nasze działania, wziąć udział w projekcie lub potrzebujesz wsparcia? Jesteśmy do Twojej dyspozycji." />
+                <meta property="og:title" content="Kontakt z Fundacją Pomocowisko | Fundacja Pomocowisko" />
+            </Helmet>
             <div className="contact-hero">
                 <div className="contact-blob" />
                 <div className="contact-blob contact-blob-secondary" />
