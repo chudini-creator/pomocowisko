@@ -12,13 +12,13 @@ const TEAM_MEMBERS = [
     {
         img: "./img/2.jpg",
         name: "Mariusz",
-        role: "Wiceprezes?",
+        role: "Wiceprezes",
         desc: "Serce i dusza organizacji. Od początku prowadzi fundację z niezachwianym zaangażowaniem i empatią.",
     },
     {
         img: "./img/3.jpg",
         name: "Lidka",
-        role: "Wiceprezes?",
+        role: "Wiceprezes",
         desc: "Łącznik między fundacją a ukraińską społecznością. Jej historia zainspirowała wielu do działania.",
     },
 ];
@@ -52,6 +52,7 @@ function Team() {
                 <title>Nasz Zespół | Ludzie Fundacji Pomocowisko</title>
                 <meta name="description" content="Poznaj zespół Fundacji Pomocowisko! To grupa pasjonatów i wolontariuszy, którzy codziennie z zaangażowaniem działają na rzecz naszej społeczności." />
                 <meta property="og:title" content="Nasz Zespół | Ludzie Fundacji Pomocowisko" />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/zespol" />
             </Helmet>
 
             <section className="tm-section">
