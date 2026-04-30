@@ -13,6 +13,7 @@ function Contact() {
                 <title>Kontakt z Fundacją Pomocowisko | Fundacja Pomocowisko</title>
                 <meta name="description" content="Skontaktuj się z Fundacją Pomocowisko. Chcesz wesprzeć nasze działania, wziąć udział w projekcie lub potrzebujesz wsparcia? Jesteśmy do Twojej dyspozycji." />
                 <meta property="og:title" content="Kontakt z Fundacją Pomocowisko | Fundacja Pomocowisko" />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/kontakt" />
             </Helmet>
             <div className="contact-hero">
                 <div className="contact-blob" />
