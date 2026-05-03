@@ -45,7 +45,7 @@ function Landing() {
   return (
     <div className="landing">
       <Helmet>
-        <title>Fundacja Pomocowisko| Pomagamy Razem</title>
+        <title>Fundacja Pomocowisko | Pomagamy Razem</title>
         <meta name="description" content="Witamy na stronie Fundacji Pomocowisko. Wspieramy lokalną społeczność, organizujemy warsztaty i pomagamy wykluczonym. Poznaj naszą misję i dołącz do nas!" />
         <meta property="og:title" content="Fundacja Pomocowisko| Pomagamy Razem" />
         <link rel="canonical" href="https://fundacjapomocowisko.pl/" />
