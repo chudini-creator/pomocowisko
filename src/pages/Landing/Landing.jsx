@@ -47,17 +47,32 @@ function Landing() {
       <Helmet>
         <title>Fundacja Pomocowisko | Pomagamy Razem</title>
         <meta name="description" content="Witamy na stronie Fundacji Pomocowisko. Wspieramy lokalną społeczność, organizujemy warsztaty i pomagamy wykluczonym. Poznaj naszą misję i dołącz do nas!" />
-        <meta property="og:title" content="Fundacja Pomocowisko| Pomagamy Razem" />
         <link rel="canonical" href="https://fundacjapomocowisko.pl/" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://fundacjapomocowisko.pl/" />
+        <meta property="og:title" content="Fundacja Pomocowisko | Pomagamy Razem" />
+        <meta property="og:description" content="Wspieramy lokalną społeczność i osoby w kryzysie. Dołącz do naszej misji!" />
+        <meta property="og:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://fundacjapomocowisko.pl/" />
+        <meta property="twitter:title" content="Fundacja Pomocowisko | Pomagamy Razem" />
+        <meta property="twitter:description" content="Wspieramy lokalną społeczność i osoby w kryzysie. Dołącz do naszej misji!" />
+        <meta property="twitter:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
+
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
-              "@type": "NGO",
+              "@type": "LocalBusiness",
               "name": "Fundacja Pomocowisko",
+              "image": "https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png",
+              "@id": "https://fundacjapomocowisko.pl",
               "url": "https://fundacjapomocowisko.pl",
-              "logo": "https://fundacjapomocowisko.pl/img/Logo.png",
-              "description": "Fundacja wspierająca lokalną społeczność, osoby w kryzysie i potrzebujące rodziny.",
+              "telephone": "+48603120157",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Ujazdów 1",
@@ -65,12 +80,28 @@ function Landing() {
                 "postalCode": "22-413",
                 "addressCountry": "PL"
               },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+48-603-120-157",
-                "contactType": "customer service",
-                "email": "pomocowisko@gmail.com"
-              }
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 50.8123,
+                "longitude": 23.0567
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              },
+              "sameAs": [
+                "https://www.facebook.com/fundacjapomocowisko"
+              ]
             }
           `}
         </script>
