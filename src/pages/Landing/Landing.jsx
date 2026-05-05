@@ -49,6 +49,31 @@ function Landing() {
         <meta name="description" content="Witamy na stronie Fundacji Pomocowisko. Wspieramy lokalną społeczność, organizujemy warsztaty i pomagamy wykluczonym. Poznaj naszą misję i dołącz do nas!" />
         <meta property="og:title" content="Fundacja Pomocowisko| Pomagamy Razem" />
         <link rel="canonical" href="https://fundacjapomocowisko.pl/" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "NGO",
+              "name": "Fundacja Pomocowisko",
+              "url": "https://fundacjapomocowisko.pl",
+              "logo": "https://fundacjapomocowisko.pl/img/Logo.png",
+              "description": "Fundacja wspierająca lokalną społeczność, osoby w kryzysie i potrzebujące rodziny.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Ujazdów 1",
+                "addressLocality": "Nielisz",
+                "postalCode": "22-413",
+                "addressCountry": "PL"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+48-603-120-157",
+                "contactType": "customer service",
+                "email": "pomocowisko@gmail.com"
+              }
+            }
+          `}
+        </script>
       </Helmet>
 
       <section className="hero" ref={heroRef}>

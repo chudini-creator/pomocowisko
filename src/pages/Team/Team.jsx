@@ -53,6 +53,43 @@ function Team() {
                 <meta name="description" content="Poznaj zespół Fundacji Pomocowisko! To grupa pasjonatów i wolontariuszy, którzy codziennie z zaangażowaniem działają na rzecz naszej społeczności." />
                 <meta property="og:title" content="Nasz Zespół | Ludzie Fundacji Pomocowisko" />
                 <link rel="canonical" href="https://fundacjapomocowisko.pl/zespol" />
+                <script type="application/ld+json">
+                  {`
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "ItemList",
+                      "itemListElement": [
+                        {
+                          "@type": "ListItem",
+                          "position": 1,
+                          "item": {
+                            "@type": "Person",
+                            "name": "Agnieszka",
+                            "jobTitle": "Prezes Fundacji"
+                          }
+                        },
+                        {
+                          "@type": "ListItem",
+                          "position": 2,
+                          "item": {
+                            "@type": "Person",
+                            "name": "Mariusz",
+                            "jobTitle": "Wiceprezes"
+                          }
+                        },
+                        {
+                          "@type": "ListItem",
+                          "position": 3,
+                          "item": {
+                            "@type": "Person",
+                            "name": "Lidka",
+                            "jobTitle": "Wiceprezes"
+                          }
+                        }
+                      ]
+                    }
+                  `}
+                </script>
             </Helmet>
 
             <section className="tm-section">

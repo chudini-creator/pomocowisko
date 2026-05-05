@@ -95,8 +95,14 @@ function About() {
                 <div className="about-stats__blob" />
                 <div className="about-stats__blob about-stats__blob--2" />
             </div>
-            <h1 style={{ opacity: 0 }}>O Fundacji Pomocowisko – Skąd pomysł i nasza misja</h1>
+
             <div className="content about-sections">
+                <div className="HeaderText HeaderText--visible" style={{ marginBottom: '40px' }}>
+                    <span className="eyebrow">Nasza Historia</span>
+                    <h1 className="HeaderTitle">O Fundacji Pomocowisko</h1>
+                    <p className="HeaderTitleSub">Poznaj naszą misję, historię i dowiedz się, dlaczego robimy to, co robimy.</p>
+                </div>
+
                 <TextSection
                     title="Skąd pomysł?"
                     text="Pomysł na fundacje powstał po wybuchu wojny w Ukrainie. Od początku konfliktu zaangażowaliśmy się w działania pomocowe, wspierając potrzebujące rodziny. Rozdzierający widok dzieci, kobiet i osób z niepełnosprawnościami, wysiadających z ostrzelanych pociągów, bardzo szybko zmotywował nas do szukania sposobów pomocy najbardziej potrzebującym. Zaczęliśmy od przygotowywania zup i kanapek, które trafiały do osób oczekujących na przekroczenie granicy. Później, przez dwa lata, udostępnialiśmy przestrzeń Dworu Ujazdowskiego wielu potrzebującym rodzinom. Oprócz zakwaterowania, zapewniliśmy im codzienne posiłki, opiekę medyczną i psychologiczną. Do tej pory pomagamy kilku rodzinom, które zostały w Polsce. To zmotywowało nas do stworzenia przedsiębiorstwa społecznego, które wspiera ich w odnalezieniu się w nowym kraju."
