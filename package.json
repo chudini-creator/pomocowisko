@@ -57,7 +57,8 @@
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
-    ]
+    ],
+    "delay": 1000
   },
   "overrides": {
     "react-snap": {
