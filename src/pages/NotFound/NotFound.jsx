@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { SearchX } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import './NotFound.css';
 
 function NotFound() {
@@ -12,6 +13,10 @@ function NotFound() {
 
   return (
     <div className={`notfound-container ${mounted ? 'mounted' : ''}`}>
+      <Helmet>
+        <title>404 - Strona nie znaleziona | Fundacja Pomocowisko</title>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <div className="notfound-content">
         <div className="notfound-icon-wrapper">
           <SearchX className="notfound-icon" size={80} strokeWidth={1.5} />

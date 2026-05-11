@@ -12,8 +12,13 @@ function Contact() {
             <Helmet>
                 <title>Kontakt z Fundacją Pomocowisko | Fundacja Pomocowisko</title>
                 <meta name="description" content="Skontaktuj się z Fundacją Pomocowisko. Chcesz wesprzeć nasze działania, wziąć udział w projekcie lub potrzebujesz wsparcia? Jesteśmy do Twojej dyspozycji." />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/kontakt/" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://fundacjapomocowisko.pl/kontakt/" />
                 <meta property="og:title" content="Kontakt z Fundacją Pomocowisko | Fundacja Pomocowisko" />
-                <link rel="canonical" href="https://fundacjapomocowisko.pl/kontakt" />
+                <meta property="og:description" content="Masz pytania? Skontaktuj się z nami! Jesteśmy tutaj, aby pomagać i wspierać lokalną społeczność." />
+                <meta property="og:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
             </Helmet>
             <div className="contact-hero">
                 <div className="contact-blob" />

@@ -124,7 +124,7 @@ function Landing() {
           </p>
 
           <div className="hero__actions">
-            <NavLink to="/o-fundacji" className="btn btn--primary">
+            <NavLink to="/o-fundacji/" className="btn btn--primary">
               Poznaj nas bliżej
             </NavLink>
           </div>

@@ -48,11 +48,11 @@
   "reactSnap": {
     "include": [
       "/",
-      "/projekty",
-      "/o-fundacji",
-      "/zespol",
-      "/kontakt",
-      "/statut"
+      "/projekty/",
+      "/o-fundacji/",
+      "/zespol/",
+      "/kontakt/",
+      "/statut/"
     ]
   },
   "overrides": {

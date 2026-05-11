@@ -4,22 +4,22 @@ import Card from "../../components/Card/Card";
 import { Helmet } from "react-helmet-async";
 const TEAM_MEMBERS = [
     {
-        img: "./img/1.jpg",
+        img: "/img/1.jpg",
         name: "Agnieszka",
         role: "Prezes Fundacji",
-        desc: "Serce i dusza organizacji. Od początku prowadzi fundację z niezachwianym zaangażowaniem i empatią.",
+        desc: "Inicjatorka i dobre serce fundacji. Z niezachwianą empatią i energią wyznacza kierunki naszych działań, dbając o każdego podopiecznego.",
     },
     {
-        img: "./img/2.jpg",
+        img: "/img/2.jpg",
         name: "Mariusz",
         role: "Wiceprezes",
-        desc: "Serce i dusza organizacji. Od początku prowadzi fundację z niezachwianym zaangażowaniem i empatią.",
+        desc: "Filar operacyjny pomocowiska. Odpowiada za logistykę i wsparcie techniczne, sprawiając, że nawet najtrudniejsze projekty stają się możliwe do realizacji.",
     },
     {
-        img: "./img/3.jpg",
+        img: "/img/3.jpg",
         name: "Lidka",
         role: "Wiceprezes",
-        desc: "Łącznik między fundacją a ukraińską społecznością. Jej historia zainspirowała wielu do działania.",
+        desc: "Nasz łącznik ze społecznością lokalną i ukraińską. Jej osobista historia i determinacja są codzienną inspiracją dla całego zespołu.",
     },
 ];
 
@@ -51,8 +51,13 @@ function Team() {
             <Helmet>
                 <title>Nasz Zespół | Ludzie Fundacji Pomocowisko</title>
                 <meta name="description" content="Poznaj zespół Fundacji Pomocowisko! To grupa pasjonatów i wolontariuszy, którzy codziennie z zaangażowaniem działają na rzecz naszej społeczności." />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/zespol/" />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://fundacjapomocowisko.pl/zespol/" />
                 <meta property="og:title" content="Nasz Zespół | Ludzie Fundacji Pomocowisko" />
-                <link rel="canonical" href="https://fundacjapomocowisko.pl/zespol" />
+                <meta property="og:description" content="Poznaj ludzi stojących za Fundacją Pomocowisko. Razem zmieniamy świat na lepsze!" />
+                <meta property="og:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
                 <script type="application/ld+json">
                   {`
                     {
