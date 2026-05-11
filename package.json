@@ -53,6 +53,10 @@
       "/zespol/",
       "/kontakt/",
       "/statut/"
+    ],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
     ]
   },
   "overrides": {
