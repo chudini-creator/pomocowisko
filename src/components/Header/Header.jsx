@@ -37,47 +37,47 @@ function Header() {
                             onMouseEnter={() => setDropdownOpen(true)}
                             onMouseLeave={() => setDropdownOpen(false)}
                         >
-                            <NavLink to="/o-fundacji/">O fundacji</NavLink>
+                            <NavLink to="/o-fundacji">O fundacji</NavLink>
                             <div className={`dropdown-menu ${dropdownOpen ? 'dropdown-menu--open' : ''}`}>
                                 <NavLink
-                                    to="/o-fundacji/#pomysl"
+                                    to="/o-fundacji#pomysl"
                                     className="dropdown-item"
                                     onClick={() => setDropdownOpen(false)}
                                 >
                                     Skąd pomysł?
                                 </NavLink>
                                 <NavLink
-                                    to="/o-fundacji/#nazwa"
+                                    to="/o-fundacji#nazwa"
                                     className="dropdown-item"
                                     onClick={() => setDropdownOpen(false)}
                                 >
                                     Skąd nazwa?
                                 </NavLink>
-                                <NavLink to="/zespol/" className="dropdown-item">
+                                <NavLink to="/zespol" className="dropdown-item">
                                     Nasz zespół
                                 </NavLink>
-                                <NavLink to="/statut/" className="dropdown-item">
+                                <NavLink to="/statut" className="dropdown-item">
                                     Statut
                                 </NavLink>
                             </div>
                         </li>
                         <li className='mobile-only'>
-                            <NavLink to="/o-fundacji/" onClick={closeMobileMenu}>O fundacji</NavLink>
+                            <NavLink to="/o-fundacji" onClick={closeMobileMenu}>O fundacji</NavLink>
                         </li>
                         <li className='mobile-only mobile-sub-item'>
-                            <NavLink to="/o-fundacji/#pomysl" onClick={closeMobileMenu}>Skąd pomysł?</NavLink>
+                            <NavLink to="/o-fundacji#pomysl" onClick={closeMobileMenu}>Skąd pomysł?</NavLink>
                         </li>
                         <li className='mobile-only mobile-sub-item'>
-                            <NavLink to="/o-fundacji/#nazwa" onClick={closeMobileMenu}>Skąd nazwa?</NavLink>
+                            <NavLink to="/o-fundacji#nazwa" onClick={closeMobileMenu}>Skąd nazwa?</NavLink>
                         </li>
                         <li className='mobile-only mobile-sub-item'>
-                            <NavLink to="/zespol/" onClick={closeMobileMenu}>Nasz zespół</NavLink>
+                            <NavLink to="/zespol" onClick={closeMobileMenu}>Nasz zespół</NavLink>
                         </li>
                         <li className='mobile-only mobile-sub-item'>
-                            <NavLink to="/statut/" onClick={closeMobileMenu}>Statut</NavLink>
+                            <NavLink to="/statut" onClick={closeMobileMenu}>Statut</NavLink>
                         </li>
-                        <li><NavLink to="/projekty/" onClick={closeMobileMenu}>Projekty</NavLink></li>
-                        <li><NavLink to="/kontakt/" onClick={closeMobileMenu}>Kontakt</NavLink></li>
+                        <li><NavLink to="/projekty" onClick={closeMobileMenu}>Projekty</NavLink></li>
+                        <li><NavLink to="/kontakt" onClick={closeMobileMenu}>Kontakt</NavLink></li>
                     </ul>
                 </nav>
 
