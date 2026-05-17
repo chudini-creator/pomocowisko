@@ -83,13 +83,19 @@ function About() {
             <Helmet>
                 <title>O Naszej Misji i Historii | Fundacja Pomocowisko</title>
                 <meta name="description" content="Poznaj historię Fundacji Pomocowisko. Skąd wziął się pomysł i co oznacza nasza nazwa? Dowiedz się, dlaczego powstała nasza fundacja i jaki mamy cel." />
-                <link rel="canonical" href="https://fundacjapomocowisko.pl/o-fundacji/" />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/o-fundacji" />
                 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://fundacjapomocowisko.pl/o-fundacji/" />
+                <meta property="og:url" content="https://fundacjapomocowisko.pl/o-fundacji" />
                 <meta property="og:title" content="O Naszej Misji i Historii | Fundacja Pomocowisko" />
-                <meta property="og:description" content="Poznaj naszą historię i misję wspierania potrzebujących. Dowiedz się, dlaczego powstało Pomocowisko." />
+                <meta property="og:description" content="Poznaj historię Fundacji Pomocowisko. Dowiedz się, dlaczego powstała nasza fundacja i jaki mamy cel." />
                 <meta property="og:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content="https://fundacjapomocowisko.pl/o-fundacji" />
+                <meta name="twitter:title" content="O Naszej Misji i Historii | Fundacja Pomocowisko" />
+                <meta name="twitter:description" content="Poznaj historię Fundacji Pomocowisko. Dowiedz się, dlaczego powstała nasza fundacja i jaki mamy cel." />
+                <meta name="twitter:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
             </Helmet>
             <div id="about-content" className="about-stats">
                 <div className="about-stats__grid">
