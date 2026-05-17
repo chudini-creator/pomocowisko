@@ -22,13 +22,19 @@ function Projects() {
             <Helmet>
                 <title>Nasze Projekty i Inicjatywy | Fundacja Pomocowisko</title>
                 <meta name="description" content="Zobacz, co robimy! Sprawdź aktualne i zrealizowane projekty Fundacji Pomocowisko. Warsztaty, wsparcie społeczne i lokalne inicjatywy." />
-                <link rel="canonical" href="https://fundacjapomocowisko.pl/projekty/" />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/projekty" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://fundacjapomocowisko.pl/projekty/" />
+                <meta property="og:url" content="https://fundacjapomocowisko.pl/projekty" />
                 <meta property="og:title" content="Nasze Projekty i Inicjatywy | Fundacja Pomocowisko" />
-                <meta property="og:description" content="Poznaj projekty Fundacji Pomocowisko. Budujemy przedsiębiorstwa społeczne i wspieramy potrzebujących." />
+                <meta property="og:description" content="Poznaj projekty Fundacji Pomocowisko." />
                 <meta property="og:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content="https://fundacjapomocowisko.pl/projekty" />
+                <meta name="twitter:title" content="Nasze Projekty i Inicjatywy | Fundacja Pomocowisko" />
+                <meta name="twitter:description" content="Poznaj projekty Fundacji Pomocowisko." />
+                <meta name="twitter:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
             </Helmet>
             <section className="tm-section">
                 <div className={`HeaderText content${inView ? " HeaderText--visible" : ""}`} ref={ref}>
