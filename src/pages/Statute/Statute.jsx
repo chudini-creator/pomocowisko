@@ -341,13 +341,19 @@ function Statute() {
             <Helmet>
                 <title>Statut i Dokumenty Fundacji | Fundacja Pomocowisko</title>
                 <meta name="description" content="Zapoznaj się ze statutem Fundacji Pomocowisko. Działamy w pełni transparentnie i jawnie. Sprawdź formalne zasady naszego funkcjonowania." />
-                <link rel="canonical" href="https://fundacjapomocowisko.pl/statut/" />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/statut" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://fundacjapomocowisko.pl/statut/" />
+                <meta property="og:url" content="https://fundacjapomocowisko.pl/statut" />
                 <meta property="og:title" content="Statut i Dokumenty Fundacji | Fundacja Pomocowisko" />
                 <meta property="og:description" content="Transparentność i zasady. Przeczytaj statut Fundacji Pomocowisko." />
                 <meta property="og:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content="https://fundacjapomocowisko.pl/statut" />
+                <meta name="twitter:title" content="Statut i Dokumenty Fundacji | Fundacja Pomocowisko" />
+                <meta name="twitter:description" content="Transparentność i zasady. Przeczytaj statut Fundacji Pomocowisko." />
+                <meta name="twitter:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
             </Helmet>
             <div className="statute-hero">
                 <div className="statute-hero__content">
