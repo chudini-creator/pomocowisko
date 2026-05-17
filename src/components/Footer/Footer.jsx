@@ -29,37 +29,51 @@ function Footer() {
     ]
     return (
         <footer className="Footer" ref={ref}>
-            <div className={`FooterHeader ${inView ? 'reveal' : ''}`} style={{opacity: inView ? 1 : 0}}>
-                <h1>POMOCOWISKO</h1>
-                {/* <div className="FooterRegistration">
-                    <p><span>KRS:</span> 0000123456</p>
-                    <p><span>NIP:</span> 123-456-78-90</p>
-                </div> */}
-            </div>
-
-            <div className="FooterInfo">
-                {Informations.map((info, index) => (
-                    <div key={index} className={`FooterInfoPart ${inView ? 'reveal' : ''} delay-${index + 1}`}
-                        style={{ opacity: inView ? 1 : 0 }}>
-                        <h3>{info.title}</h3>
-                        <div className="FooterInfoRow">
-                            {info.icon}
-                            <p>{info.info}</p>
-                        </div>
-                        {info.secInfo && (
-                            <div className="FooterInfoRow">
-                                {info.secIcon}
-                                <p> {info.secInfo}</p>
-                            </div>
-                        )}
-
+            <div className="FooterContainer">
+                <div className={`FooterGrid ${inView ? 'reveal' : ''}`}>
+                    <div className="FooterColumn FooterBrand">
+                        <div className="FooterLogo">POMOCOWISKO</div>
+                        <p className="FooterTagline">
+                            Budujemy wspólnotę opartą na wzajemnym wsparciu i solidarności. 
+                            Miejsce, gdzie pomoc spotyka się z potrzebą.
+                        </p>
                     </div>
-                ))}
-            </div>
 
-            <div className={`FooterDivider ${inView ? 'reveal delay-3' : ''}`} style={{opacity: inView ? 1 : 0}}>
-                <p className="FooterCopyright">&copy; 2026 Pomocowisko. Wszystkie prawa zastrzeżone.</p>
-                <p className="FooterCopyright">Realizacja: Igor Sobierajczyk</p>
+                    <div className="FooterColumn">
+                        <h3>Fundacja</h3>
+                        <nav className="FooterLinkList">
+                            <a href="/o-fundacji">O nas</a>
+                            <a href="/zespol">Nasz zespół</a>
+                            <a href="/projekty">Projekty</a>
+                            <a href="/statut">Statut</a>
+                        </nav>
+                    </div>
+
+                    <div className="FooterColumn">
+                        <h3>Kontakt</h3>
+                        <div className="FooterContactInfo">
+                            <a href="mailto:pomocowisko@gmail.com" className="ContactRow">
+                                <Inbox size={18} />
+                                <span>pomocowisko@gmail.com</span>
+                            </a>
+                            <a href="tel:+48603120157" className="ContactRow">
+                                <Phone size={18} />
+                                <span>+48 603 120 157</span>
+                            </a>
+                            <div className="ContactRow">
+                                <House size={18} />
+                                <span>Ujazdów 1, 22-413</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={`FooterDivider ${inView ? 'reveal delay-3' : ''}`}>
+                    <div className="FooterBottom">
+                        <p>&copy; 2026 Pomocowisko. Wszystkie prawa zastrzeżone.</p>
+                        <p className="FooterAuthor">Realizacja: Igor Sobierajczyk</p>
+                    </div>
+                </div>
             </div>
         </footer>
     )
