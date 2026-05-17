@@ -1,6 +1,6 @@
 import { useInView } from 'react-intersection-observer';
 import './Footer.css';
-import { House, Inbox, Phone, Landmark } from 'lucide-react';
+import { House, Inbox, Phone } from 'lucide-react';
 function Footer() {
 
     const { ref, inView } = useInView({
