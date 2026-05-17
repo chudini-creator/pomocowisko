@@ -8,25 +8,6 @@ function Footer() {
         threshold: 0.1,
     });
 
-    const Informations = [
-        {
-            title: "Adres siedziby",
-            icon: <House />,
-            info: "Ujazdów 1, 22-413"
-        },
-        {
-            title: "Dane kontaktowe",
-            icon: <Inbox />,
-            info: "pomocowisko@gmail.com",
-            secIcon: <Phone />,
-            secInfo: "+48 603 120 157"
-        },
-        {
-            title: "Konto bankowe",
-            icon: <Landmark />,
-            info: "PKO BP S.A. 12 1020 1026 0000 0002 1234 5678"
-        }
-    ]
     return (
         <footer className="Footer" ref={ref}>
             <div className="FooterContainer">
@@ -34,7 +15,7 @@ function Footer() {
                     <div className="FooterColumn FooterBrand">
                         <div className="FooterLogo">POMOCOWISKO</div>
                         <p className="FooterTagline">
-                            Budujemy wspólnotę opartą na wzajemnym wsparciu i solidarności. 
+                            Budujemy wspólnotę opartą na wzajemnym wsparciu i solidarności.
                             Miejsce, gdzie pomoc spotyka się z potrzebą.
                         </p>
                     </div>
