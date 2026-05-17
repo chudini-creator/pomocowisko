@@ -57,11 +57,11 @@ function Landing() {
         <meta property="og:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
 
         {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://fundacjapomocowisko.pl/" />
-        <meta property="twitter:title" content="Fundacja Pomocowisko | Pomagamy Razem" />
-        <meta property="twitter:description" content="Wspieramy lokalną społeczność i osoby w kryzysie. Dołącz do naszej misji!" />
-        <meta property="twitter:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://fundacjapomocowisko.pl/" />
+        <meta name="twitter:title" content="Fundacja Pomocowisko | Pomagamy Razem" />
+        <meta name="twitter:description" content="Wspieramy lokalną społeczność i osoby w kryzysie. Dołącz do naszej misji!" />
+        <meta name="twitter:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
 
         <script type="application/ld+json">
           {`
@@ -124,7 +124,7 @@ function Landing() {
           </p>
 
           <div className="hero__actions">
-            <NavLink to="/o-fundacji/" className="btn btn--primary">
+            <NavLink to="/o-fundacji" className="btn btn--primary">
               Poznaj nas bliżej
             </NavLink>
           </div>
