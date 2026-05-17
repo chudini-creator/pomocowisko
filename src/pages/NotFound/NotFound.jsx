@@ -15,7 +15,8 @@ function NotFound() {
     <div className={`notfound-container ${mounted ? 'mounted' : ''}`}>
       <Helmet>
         <title>404 - Strona nie znaleziona | Fundacja Pomocowisko</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="description" content="Przepraszamy, ale szukana strona nie została znaleziona. Wróć do strony głównej Fundacji Pomocowisko." />
       </Helmet>
       <div className="notfound-content">
         <div className="notfound-icon-wrapper">
