@@ -51,13 +51,19 @@ function Team() {
             <Helmet>
                 <title>Nasz Zespół | Ludzie Fundacji Pomocowisko</title>
                 <meta name="description" content="Poznaj zespół Fundacji Pomocowisko! To grupa pasjonatów i wolontariuszy, którzy codziennie z zaangażowaniem działają na rzecz naszej społeczności." />
-                <link rel="canonical" href="https://fundacjapomocowisko.pl/zespol/" />
+                <link rel="canonical" href="https://fundacjapomocowisko.pl/zespol" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://fundacjapomocowisko.pl/zespol/" />
+                <meta property="og:url" content="https://fundacjapomocowisko.pl/zespol" />
                 <meta property="og:title" content="Nasz Zespół | Ludzie Fundacji Pomocowisko" />
                 <meta property="og:description" content="Poznaj ludzi stojących za Fundacją Pomocowisko. Razem zmieniamy świat na lepsze!" />
                 <meta property="og:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content="https://fundacjapomocowisko.pl/zespol" />
+                <meta name="twitter:title" content="Nasz Zespół | Ludzie Fundacji Pomocowisko" />
+                <meta name="twitter:description" content="Poznaj ludzi stojących za Fundacją Pomocowisko. Razem zmieniamy świat na lepsze!" />
+                <meta name="twitter:image" content="https://fundacjapomocowisko.pl/img/PomocowiskoLogo2.png" />
                 <script type="application/ld+json">
                   {`
                     {
